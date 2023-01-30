@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipePage</title>
+    <link rel="stylesheet" href="cookiemain.css">
+    <link rel="stylesheet" type="text/css" href="print.css" media="print"/>
+    <div class="header-container">
+    </div>
+</head>
+
+<body>
+    <script>
+        function printDiv1() {
+            var divContents = document.getElementById("Recipe1").innerHTML;
+            var a = window.open('', '', 'height=500, width=500');
+            a.document.write('<html>');
+            a.document.write('<body>');
+            a.document.write(divContents);
+            a.document.write('</body></html>');
+            a.document.close();
+            a.print();
+        }
+    
+        function printDiv2() {
+            var divContents = document.getElementById("Recipe2").innerHTML;
+            var a = window.open('', '', 'height=500, width=500');
+            a.document.write('<html>');
+            a.document.write('<body>');
+            a.document.write(divContents);
+            a.document.write('</body></html>');
+            a.document.close();
+            a.print();
+        }
+        function printDiv3() {
+            var divContents = document.getElementById("Recipe3").innerHTML;
+            var a = window.open('', '', 'height=500, width=500');
+            a.document.write('<html>');
+            a.document.write('<body>');
+            a.document.write(divContents);
+            a.document.write('</body></html>');
+            a.document.close();
+            a.print();
+        } 
+    </script>
+
+    <style type="text/css">
+        .blinking {
+            animation: blinkingText 1s infinite;
+            font-family: Solway;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            color: rgb(244, 9, 9);
+            font-size: 45px;
+        }
+        
+        @keyframes blinkingText {
+            from {
+                opacity: 1;
+                color : rgb(244, 9, 9);
+                }
+            to {
+                opacity: 1;
+                color : rgb(6, 195, 16);
+                }
+            0% {
+                opacity: 1;
+                color : rgb(244, 9, 9);
+            }
+            33% {
+                opacity: 1;
+                color : rgb(6, 195, 16);
+            }
+            66% {
+                opacity: 1;
+                color : rgb(244, 9, 9);
+            }
+            100% {
+                opacity: 1;
+                color : rgb(6, 195, 16);
+            }
+        }
+    </style>
+
+        <span class="blinking">XMAS SNAX RECIPES</span>
+
+    <div class="img"><img src="PBCookies.jpg">
+    </div>
+    <div class="recipecard" id="Recipe2">
+        <h3>Chocolate & PB Middle Cookies</h3>
+        <p>INGREDIENTS:</p>
+        <p>Dough: <br>
+            1 ½ cups all-purpose flour <br>
+
+            ½ cup unsweetened cocoa powder <br>
+            
+            ½ teaspoon baking soda <br>
+            
+            ½ cup white sugar <br>
+            
+            ½ cup packed brown sugar <br>
+            
+            ½ cup soft margarine <br>
+            
+            ¼ cup peanut butter <br>
+            
+            1 teaspoon vanilla extract <br>
+            
+            1 egg <br><br>
+            Filling: <br>
+            ¾ cup confectioners' sugar <br>
+            
+            ¾ cup peanut butter.</p>
+    
+        <p>INSTRUCTIONS:</p>
+            <p>In small bowl blend flour, cocoa and baking soda. Mix until well blended.<br>
+                
+                In large bowl beat white and brown sugars, butter or margarine and 1/4 cup peanut butter, until light and fluffy. Add vanilla and egg, beat. Stir in flour mixture until blended. Set aside.<br><br>
+                
+                To make Filling: Combine confectioner's sugar and 3/4 cup peanut butter. Blend well.<br><br>
+                
+                Roll filling into 30 1-inch balls. For each cookie, with floured hands, shape about 1 tablespoon of dough around 1 peanut butter ball, covering completely. Place 2 inches apart on an ungreased cookie sheet. Flatten with glass dipped in white sugar.<br><br>
+                
+                Bake at 375 degrees F (190 degrees C) for 7-9 minutes. When cookies are done, they should be set and slightly cracked.<br><br>
+                Enjoy!<br><br>
+            Yields 30 Cookies</p>
+            <p><a href="https://www.allrecipes.com/recipe/10064/magic-peanut-butter-middles/">See Original Recipe Here</a></p>
+        <input type="button" value="Print this Recipe" onclick="printDiv2()">
+    </div>
+
+    <div class="img"><img src="ChocoMiceFinal.jpg">
+    </div>
+    <div class="recipecard" id="Recipe3">
+        <h3>Chocolate Mice</h3>
+        <p>INGREDIENTS:</p>
+        <p>One 12 oz package of Melting chocolate (I used milk and white)<br>
+            Two 10 oz jars of Marachino cherries with stems<br>
+            One 10oz package of Hershey Kisses (I used regular milk chocolate, hot cocoa, and sugar cookie flavors)<br>
+            Cookie decorating color icing<br>
+        </p>
+        <p>INSTRUCTIONS:</p>
+            <p>
+                Prepare melting chocolate in small bowl according to packaging, either with double boiler or microwave. Be careful not to prepare too much chocolate at a time, as it will harden before you use it all and will not reheat well.<br><br>
+            Pick a cherry and pat it dry of juice. Hold cherry by the stem and dip in melted chocolate. Make sure it's completely covered.<br><br>
+            While chocolate is still wet, place cherry on wax paper with stem pointed horizontally. Then apply Hershey kiss to other side of cherry (dip flat bottom of Kiss into chocolate bowl first if needed).<br><br>
+            Use decorative icing (or edible candy eyeballs, if you have them) to make dots for eyes and nose. For ears, you can make small chocolate mounds on the head, use almond slivers, or just use the decorative icing.<br><br>
+            Enjoy!<br><br>
+            Yields approx 45 mice
+            </p>
+        <input type="button" value= "Print This Recipe" onclick="printDiv3()">
+    </div>
+</body>
+</html>

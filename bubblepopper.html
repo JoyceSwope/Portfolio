@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUBBLE TIME!</title>
+    <style>
+        body
+        {
+            background-color:rgb(0, 0, 0);
+            width:560px;
+            height:560px;
+            display: flex;
+            flex-wrap:wrap;
+            align-content:flex-start;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        #bubble
+        {
+            margin: 5px;
+            position:relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.25);
+            cursor:pointer;
+            
+        }
+        #bubble span
+        {
+            position: absolute;
+            border-radius: 50%;
+        }
+        #bubble span:nth-child(1)
+        {
+            inset: 8px;
+            border-left: solid #0fb4ff;
+            filter: blur(4px);
+        }
+        #bubble span:nth-child(2)
+        {
+            inset: 8px;
+            border-bottom: solid #ffffff;
+            filter: blur(2px);
+        }
+        #bubble span:nth-child(3)
+        {
+            inset: 25px;
+            border-bottom: solid #8bcb61;
+            filter: blur(6px);
+        }
+        #bubble span:nth-child(4)
+        {
+            inset: 8px;
+            border-right: solid #ff47cb;
+            filter: blur(3px);
+        }
+        #bubble span:nth-child(5)
+        {
+            inset: 20px;
+            border-left: solid #f447af;
+            filter: blur(6px);
+        }
+        #bubble::before
+        {
+            content: " ";
+            position: absolute;
+            top: 20px;
+            left: 45px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: white;
+            filter: blur(2px);
+        }
+        #bubble::after
+        {
+            content: " ";
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+            filter: blur(2px);
+        }
+        #bubble:hover
+        {
+            animation: wiggle .5s;
+        }
+    @keyframes wiggle {
+        0% {height:100px; width:100px}
+        33% {height:105px; width:95px}
+        66% {height:95px; width:105px}
+        100% {height:100px; width:100px}
+    }
+        #bubble:active{animation: pop .3s }
+        @keyframes pop {
+            0% {opacity:100%}
+            10%{background-color: white}
+            15%{opacity:0%}
+            100%{opacity:0%}
+        }
+        #sound{
+            height:0;
+            width:0;
+        }
+    </style>
+    <script>
+        $('button').on('click', function (e) {
+		e.stopPropagation();
+		for (var i = 0; i < 10; i++) {
+			bubbles.push(new Bubble());
+		}
+		document.getElementById('sound').innerHTML="<audio autoplay><source src='audio/bubbles.wav' type='audio/wav'></audio>";
+	})
+
+	$('body').on('click', function(e) {
+		var clickX = e.pageX;
+		var clickY = e.pageY;
+
+		_.each(bubbles, function(b, i) {
+			if ((clickX < b.x + b.size && clickX > b.x - b.size) && (clickY < b.y + b.size && clickY > b.y - b.size)) {
+				b.pop(i);
+			}
+		});
+	});
+
+        this.pop = function (i) {
+			document.getElementById('sound').innerHTML="<audio autoplay><source src='audio/pop.wav' type='audio/wav'></audio>";
+			bubbles[i] = new Bubble();
+		}
+    </script>
+    </head>
+    <body>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+       
+    </body>
+    </html>

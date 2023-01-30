@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Box Practice</title>
+    <style>
+        body {
+            margin: auto;
+            width: 80vw;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        div {
+            width: 20vw;
+            height: 20vw;
+            background-color: rgb(0, 0, 0);
+            /* border: 1px solid black; */
+        }
+    </style>
+    <script>
+        
+        const changeToRandomColor = (theEvent) => {
+            // random neon color!
+            // HSL - hue, saturation, lightness
+            // we'll set s to 100% and l to 50%
+            // generate a random h between 0 and 359
+            const hue = Math.floor(Math.random() * 359);
+            theEvent.target.style.backgroundColor = `hsl(${hue}, 100%, 90%)`;
+        }
+
+        // when the page loads, add a mouseenter event to every div that calls 'changeToRandomColor' <-- later? Homework? document.onLoad ??? search for 'when the page loads'
+
+        // when the page loads, create a div!
+        // then loop it!
+        window.onload = () => {
+            // let boxen = "";
+            // for(let i = 0; i<10; i++) {
+            //     boxen += "<div onmouseenter=\"changeToRandomColor(event)\"></div>";
+            // }
+            const newDiv = document.createElement("div");
+            newDiv.setAttribute("onclick", "changeToRandomColor(event)");
+            for(let i= 0; i< 10; i++) {
+                const newNode = newDiv.cloneNode();
+                document.getElementById("body").appendChild(newNode);
+            }
+        }
+    </script>
+</head>
+<body id="body">
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+@font-face {
+    font-family: Solway;
+    src: url(Solway-Medium.ttf);
+}
+body{
+    font-family: Solway;
+    color: rgb(6, 73, 6);
+    background-color:rgb(244, 221, 172);
+    padding:30px;
+    
+}
+.recipecard{
+    width: 80%;
+    height: 80%;
+    background-color:rgb(255, 255, 255);
+    border: solid 5px rgb(199, 7, 7);
+    padding: 5px;
+    margin-bottom: 5%;
+}
+.header-container{
+    padding: 20%;
+    background-size: 100%;
+    background-image: url("XmasCookiePageHeader.jpg");
+    background-repeat: no-repeat;
+}
+img{
+    width:80%;
+    border:solid 5px rgb(199, 7, 7);
+    }
+
+

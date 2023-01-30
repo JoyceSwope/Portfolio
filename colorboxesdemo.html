@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This doesn't change the javascript name for the document</title>
+    <style>
+        body {
+            background-color:rgb(212, 229, 245);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(159, 197, 209);
+        }
+    </style>
+
+    <script>
+        function changeColor(name_of_box) {
+            // figure out how to change the color
+            var hue = Math.random() * 360
+            
+            document.getElementById(name_of_box).style.backgroundColor = "hsl(" + hue + ", 100%, 100%)";
+            //"rgb(100, 200, 255)";
+            console.log("I ran the changecolor function!!!!");
+        }
+    </script>
+</head>
+<body>
+    <div onmouseover="changeColor(id)" id="box1"></div>
+    <div onmouseover="changeColor(id)" id="box2"></div>
+    <div onmouseover="changeColor(id)" id="box3"></div>
+    <div onmouseover="changeColor(id)" id="box4"></div>
+    <div onmouseover="changeColor(id)" id="box5"></div>
+    <div onmouseover="changeColor(id)" id="box6"></div>
+    <div onmouseover="changeColor(id)" id="box7"></div>
+    <div onmouseover="changeColor(id)" id="box8"></div>
+    <div onmouseover="changeColor(id)" id="box9"></div>
+    <div onmouseover="changeColor(id)" id="box10"></div>
+    <div onmouseover="changeColor(id)" id="box11"></div>
+    <div onmouseover="changeColor(id)" id="box12"></div>
+    <div onmouseover="changeColor(id)" id="box13"></div>
+    <div onmouseover="changeColor(id)" id="box14"></div>
+    <div onmouseover="changeColor(id)" id="box15"></div>
+    <div onmouseover="changeColor(id)" id="box16"></div>
+</body>
+</html>
