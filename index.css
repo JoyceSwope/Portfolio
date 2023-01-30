@@ -4,25 +4,44 @@ header{
     background-color:rgb(33, 50, 94);
     display:flex;
     justify-content:space-around;
-    text-align:center;
-    margin:0%;
-    padding:3px;
-    width: 100%;
+    padding-top:3%;
+    padding-left:3%;
+    width: 100vw;
     height: 20vh;
 }
-
-.headertitle{
-    display:flex-end;
-    justify-content:right;
-    width:300px;
-    text-align:right;
-    padding:3%;
+.yellowbridge{
+    background-image: url("yellowbridge.png");
+    width:100px;
+    height:75px;
 }
 .navbar{
+    display:flex;
+    justify-content:space-around;
+    padding-bottom:3px;
     background-color:rgb(62, 73, 122);
-    width:100%;
-    height:5vh;
-    padding:3px;
+    color:rgb(240, 240, 240);
+    width:100vw;
+    height:7vh;
+}
+.sectiontitle{
+    display:flex;
+    justify-content:left;
+    padding:3%;
+    color:rgb(62, 73, 122);
+}
+.yellowsectionicon{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    color:rgb(241, 208, 10);
+}
+.resumesection{
+    text-align:left;
+    width:80%;
+    background-color:rgb(62, 73, 122);
+    color: rgb(240, 240, 240);
+    padding:2%;
+    
 }
 body{
     font-family:'Franklin Gothic Medium';
