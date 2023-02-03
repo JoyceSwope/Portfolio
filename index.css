@@ -26,26 +26,10 @@ header{
 }
 
 .sectiontitle{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    text-decoration:underline 4px rgb(241, 208, 10);
     color:rgb(62, 73, 122);
-    background-color: rgb(241, 208, 10);
-    width:fit-content;
-    height:40px;
-    border-radius:50%;
-    padding:5px;
-    margin-left:45%;
 }
 
-.resumesection{
-    text-align:left;
-    width:80%;
-    background-color:rgb(62, 73, 122);
-    color: rgb(240, 240, 240);
-    padding:2%;
-    
-}
 body{
     width:100vw;
     font-family:'Franklin Gothic Medium';
@@ -55,20 +39,7 @@ body{
     background-image: url("alternatebodybackground.png");
     background-size:contain;
 }
-.bodycontainer{
-    display:flex;
-    flex-direction: column;
-    align-content:center;
-}
-.button{
-    background-color: rgb(241, 208, 10);
-    border-radius: 10px;
-    text-decoration:none;
-    color: rgb(33, 50, 94);
-    width:300px;
-    height:100px;
-    padding:3%;
-}
+
 .colors{
     color:
     rgb(33, 50, 94)
@@ -80,4 +51,21 @@ a{
     color:rgb(240, 240, 240);
     text-decoration:none;
 
+}
+.clickme {
+    background-color: #EEEEEE;
+    padding: 8px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+}
+.button{
+    background-color: rgb(241, 208, 10);
+    border-radius: 10px;
+    text-decoration:none;
+    color: rgb(33, 50, 94);
+    width:40%;
+    height:fit-content;
+    padding:1%;
 }
