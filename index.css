@@ -65,18 +65,22 @@ a{
     text-decoration:none;
     color: rgb(33, 50, 94);
     width:40%;
-    height:fit-content;
+    height:20%;
     padding:1%;
     cursor:pointer;
 }
+.button:hover{
+    background-color:rgb(241, 164, 10);
+}
 
-.contact-icons{
+.button-spacer{
     display:flex;
-    justify-content:space-evenly;
-    width:90%;
+    justify-content:space-around;
+    width:90vw;
     height:fit-content;
     margin-left:10%;
     margin-right:10%;
+    
 }
 
 input[type=text], select, textarea {
