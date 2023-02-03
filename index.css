@@ -4,7 +4,6 @@ header{
     background-image: url("headeralternate.png");
     background-size:cover;
     background-repeat:no repeat;
-
     display:flex;
     justify-content:space-around;
     padding:3%;
@@ -73,9 +72,11 @@ a{
 
 .contact-icons{
     display:flex;
-    width:100%;
+    justify-content:space-evenly;
+    width:90%;
     height:fit-content;
-    justify-content:space-around;
+    margin-left:10%;
+    margin-right:10%;
 }
 
 input[type=text], select, textarea {
