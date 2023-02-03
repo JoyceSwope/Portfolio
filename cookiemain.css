@@ -4,28 +4,46 @@
 }
 body{
     font-family: Solway;
-    color: rgb(6, 73, 6);
-    background-color:rgb(244, 221, 172);
+    color: rgb(78, 108, 80);
+    background-color:rgb(250, 236, 214);
     padding:30px;
     
 }
 .recipecard{
-    width: 80%;
+    width: 50%;
     height: 80%;
     background-color:rgb(255, 255, 255);
-    border: solid 5px rgb(199, 7, 7);
+    border: solid 5px rgb(130, 0, 0);
     padding: 5px;
     margin-bottom: 5%;
 }
-.header-container{
-    padding: 20%;
-    background-size: 100%;
-    background-image: url("XmasCookiePageHeader.jpg");
-    background-repeat: no-repeat;
+
+.headercontainer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:20vh;
+    width:100vw;
+    background-color: rgb(130, 0, 0);
+    color:rgb(250, 236, 214);
+}
+
+.glowinglight{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    
 }
 img{
-    width:80%;
-    border:solid 5px rgb(199, 7, 7);
+    width:50%;
+    border:solid 5px rgb(130, 0, 0);
     }
 
+.colors{
+    
+    color: rgb(130, 0, 0);
+    color: rgb(78, 108, 80);
+    color: rgb(242, 222, 186);
+    color: rgb(250, 236, 214);
+}
 
