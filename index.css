@@ -19,7 +19,7 @@ header{
     padding-bottom:10px;
     background-color:rgb(62, 73, 122);
     color:rgb(240, 240, 240);
-    width:103vw;
+    width:106vw;
     height:7vh;
     margin-left:-1%;
 }
@@ -64,10 +64,12 @@ a{
     border-radius: 10px;
     text-decoration:none;
     color: rgb(33, 50, 94);
-    width:40%;
-    height:20%;
+    width:fit-content;
+    height:fit-content;
     padding:1%;
     cursor:pointer;
+    margin:2%;
+
 }
 .button:hover{
     background-color:rgb(241, 164, 10);
@@ -75,12 +77,31 @@ a{
 
 .button-spacer{
     display:flex;
-    justify-content:space-around;
-    width:90vw;
+    flex-wrap:wrap;
+    flex-direction:row;
+    width:70vw;
     height:fit-content;
-    margin-left:10%;
-    margin-right:10%;
-    
+    margin-left:25%;
+    margin-right:25%;
+    padding:2%;
+}
+
+.icon-spacer{
+    display:flex;
+    justify-content:space-between;
+    width:53vw;
+    height:fit-content;
+    margin-left:25%;
+    margin-right:25%;
+}
+.icon-button{
+    background-color: white;
+    border-radius: 10px;
+    text-decoration:none;
+    color: rgb(33, 50, 94);
+    width:45px;
+    height:45px;
+    cursor:pointer;
 }
 
 input[type=text], select, textarea {
